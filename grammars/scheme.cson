@@ -1,0 +1,27 @@
+'scopeName': 'source.scheme'
+'name': 'Scheme'
+'fileTypes': ['scm']
+'patterns': [
+  {
+    'match': '\\b(arbno|digit|number|whitespace|letter)'
+    'name': 'keyword.scheme'
+  }
+  {
+    'match': '\\"(\\w+|.)\\"'
+    'name': 'string.quoted'
+  }
+  {
+    'match': '\\#lang.+'
+    'name': 'keyword.scheme'
+  }
+  {
+
+    'captures':
+      '1':
+        'name': 'keyword.scheme'
+      '2':
+        'name': 'entity.name.other.attribute-name.scheme'
+    'match': '\\((define(?:-datatype)*)\\b(.+)'
+    'name': 'define.scheme'
+  }
+]
